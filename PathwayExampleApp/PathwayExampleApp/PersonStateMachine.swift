@@ -8,6 +8,7 @@
 
 import UIKit
 
+// This combines both the app's state and the navigation states into a single class. Since the state is simple (2 fields) that's ok, but you'll want to split that out as things start to get a little more complex.
 class PersonStateMachine: ViewControllerStateMachine {
     var firstName: String = ""
     var lastName: String = ""

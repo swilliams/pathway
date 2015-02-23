@@ -16,6 +16,8 @@ class ViewControllerStateMachine {
         self.states = states
     }
 
+    // Finds the next State in line to be displayed. Loops through the `states` array for the currentState, then prepares the next one for launch.
+    // This is not private, so it can be overriden to use different logic to determine what state should be next.
     func nextStateForController(currentController: UIViewController) -> (currentState: NavigationState?, nextState: NavigationState?) {
         var currentControllerIdentifier = currentController.dynamicType.description()
         var currentState: NavigationState?
@@ -30,10 +32,10 @@ class ViewControllerStateMachine {
                 break
             }
         }
-        if nextIndex == nil {
+        if nextIndex == nil { // currentState was not found
             return (nil, nil)
         }
-        if nextIndex >= states.count {
+        if nextIndex >= states.count { // currentState is at the end of the line
             return (currentState, nil)
         }
         nextState = states[nextIndex!]
