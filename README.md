@@ -5,7 +5,7 @@ Sometimes you have a set of ViewControllers that are re-used in various workflow
 
 ## Setup
 Create a list of states for your app. 
-```
+```swift
   let firstnameState = NavigationState(identifier: HomeViewController.self) {
       return HomeViewController(nibName: "HomeViewController", bundle: nil)
   }
@@ -18,12 +18,12 @@ Create a list of states for your app.
 ```
 
  Instantiate a `ViewControllerStateMachine` instance and provide it a `UINavigationViewController` and those list of states.
-```
+```swift
   let stateMachine = ViewControllerStateMachine(navController: nav, states: [firstnameState, lastnameState, finalState])
 ```
 
 Call `gotoNext` when you want to move to the ViewController.
-```
+```swift
   stateMachine.gotoNext(fromController: self)
 ```
 
