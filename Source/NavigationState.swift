@@ -11,7 +11,7 @@ typealias ViewControllerBuilder = (Void -> UIViewController)
 
 class NavigationState : NSObject, State {
     var createViewController: ViewControllerBuilder
-    let identifier: String
+    var identifier: String
 
     init(identifier: UIViewController.Type, builder: ViewControllerBuilder) {
         self.createViewController = builder

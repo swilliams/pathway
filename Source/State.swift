@@ -8,7 +8,7 @@
 import Foundation
 
 @objc protocol State {
-    var identifier: String { get }
+    var identifier: String { get set }
 
     optional func shouldTransitionToNewState() -> Bool
     optional func willTransitionToNewState()

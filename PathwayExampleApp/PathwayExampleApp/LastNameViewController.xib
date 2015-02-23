@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LastNameViewController" customModule="PathwayExampleApp" customModuleProvider="target">
+            <connections>
+                <outlet property="lastnameField" destination="kKe-Ff-o0J" id="Xfq-j2-yQU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kKe-Ff-o0J">
+                    <rect key="frame" x="99" y="95" width="492.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFu-kC-mZD">
+                    <rect key="frame" x="284" y="143" width="32" height="30"/>
+                    <state key="normal" title="Next">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextTapped:" destination="-1" eventType="touchUpInside" id="GyT-rk-stA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xv-dJ-wGn">
+                    <rect key="frame" x="8" y="99" width="83.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="tFu-kC-mZD" secondAttribute="centerX" id="KDy-SW-g6S"/>
+                <constraint firstItem="0xv-dJ-wGn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="R3z-Po-o1I"/>
+                <constraint firstItem="kKe-Ff-o0J" firstAttribute="leading" secondItem="0xv-dJ-wGn" secondAttribute="trailing" constant="8" id="U3H-kE-dOP"/>
+                <constraint firstItem="0xv-dJ-wGn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="99.5" id="bWE-8V-AgD"/>
+                <constraint firstItem="kKe-Ff-o0J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="95" id="eHm-bT-HzZ"/>
+                <constraint firstAttribute="trailing" secondItem="kKe-Ff-o0J" secondAttribute="trailing" constant="8.5" id="ieX-iX-sBk"/>
+                <constraint firstItem="tFu-kC-mZD" firstAttribute="top" secondItem="kKe-Ff-o0J" secondAttribute="bottom" constant="18" id="p5c-Xa-6UB"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
