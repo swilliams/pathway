@@ -25,7 +25,8 @@ class PersonStateMachine: ViewControllerStateMachine {
         let finalState = NavigationState(identifier: EndViewController.self) {
             return EndViewController(nibName: "EndViewController", bundle: nil)
         }
-        super.init(navController: nav, states: [firstnameState, lastnameState, finalState])
+        let linearDecider = LinearStateMachineLogic(states: [firstnameState, lastnameState, finalState])
+        super.init(navController: nav, stateMachineLogic: linearDecider)
     }
 
 }
