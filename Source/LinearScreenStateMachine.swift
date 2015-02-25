@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewControllerStateMachine {
+class LinearScreenStateMachine: BaseScreenStateMachine {
     let states: [NavigationState]
     private var navController: UINavigationController
 
@@ -18,7 +18,7 @@ class ViewControllerStateMachine {
 
     // Finds the next State in line to be displayed. Loops through the `states` array for the currentState, then prepares the next one for launch.
     // This is not private, so it can be overriden to use different logic to determine what state should be next.
-    func nextStateForController(currentController: UIViewController) -> (currentState: NavigationState?, nextState: NavigationState?) {
+    override func nextStateForController(currentController: UIViewController) -> (currentState: NavigationState?, nextState: NavigationState?) {
         var currentControllerIdentifier = currentController.dynamicType.description()
         var currentState: NavigationState?
         var nextState: NavigationState?
@@ -42,32 +42,12 @@ class ViewControllerStateMachine {
         return (currentState, nextState)
     }
 
-    func gotoNext(fromController controller: UIViewController) {
-        var (currentState, nextState) = nextStateForController(controller)
-        if let currentState = currentState {
-            if currentState.respondsToSelector(Selector("shouldTransitionToNewState")) {
-                let canTransition = (currentState as State).shouldTransitionToNewState!()
-                if !canTransition {
-                    handleStateError(currentState)
-                    return
-                }
-            }
-            if let nextState = nextState {
-                (nextState as State).willTransitionToNewState?()
-                navigateToNextState(nextState)
-                (nextState as State).didTransitionToNewState?()
-            }
-        } else {
-            assert(currentState != nil, "Could not load a current State for this controller")
-        }
-    }
-
-    func navigateToNextState(nextState: NavigationState) {
+    override func navigateToNextState(nextState: NavigationState) {
         let nextController = nextState.createViewController()
         navController.pushViewController(nextController, animated: true)
     }
 
-    func handleStateError(currentState: State) {
+    override func handleStateError(currentState: State) {
         println("cannot navigate to newState")
     }
 }

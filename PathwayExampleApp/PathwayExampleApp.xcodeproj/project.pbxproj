@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A77A20A71A9E6C1B00B56D73 /* ScreenStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A20A61A9E6C1B00B56D73 /* ScreenStateMachine.swift */; };
+		A77A20A91A9E6CAF00B56D73 /* BaseScreenStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A20A81A9E6CAF00B56D73 /* BaseScreenStateMachine.swift */; };
 		A7A57F881A9B9229001BD3E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A57F871A9B9229001BD3E3 /* AppDelegate.swift */; };
 		A7A57F8F1A9B9229001BD3E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A57F8E1A9B9229001BD3E3 /* Images.xcassets */; };
 		A7A57F921A9B9229001BD3E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A57F901A9B9229001BD3E3 /* LaunchScreen.xib */; };
 		A7A57FAB1A9B9285001BD3E3 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A57FA81A9B9285001BD3E3 /* NavigationState.swift */; };
 		A7A57FAC1A9B9285001BD3E3 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A57FA91A9B9285001BD3E3 /* State.swift */; };
-		A7A57FAD1A9B9285001BD3E3 /* ViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A57FAA1A9B9285001BD3E3 /* ViewControllerState.swift */; };
+		A7A57FAD1A9B9285001BD3E3 /* LinearScreenStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A57FAA1A9B9285001BD3E3 /* LinearScreenStateMachine.swift */; };
 		A7A57FB01A9B932A001BD3E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A57FAE1A9B9329001BD3E3 /* HomeViewController.swift */; };
 		A7A57FB11A9B932A001BD3E3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A57FAF1A9B932A001BD3E3 /* HomeViewController.xib */; };
 		A7A57FB41A9B93AE001BD3E3 /* LastNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A57FB21A9B93AE001BD3E3 /* LastNameViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A77A20A61A9E6C1B00B56D73 /* ScreenStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenStateMachine.swift; path = ../../Source/ScreenStateMachine.swift; sourceTree = "<group>"; };
+		A77A20A81A9E6CAF00B56D73 /* BaseScreenStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseScreenStateMachine.swift; path = ../../Source/BaseScreenStateMachine.swift; sourceTree = "<group>"; };
 		A7A57F821A9B9229001BD3E3 /* PathwayExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathwayExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A57F861A9B9229001BD3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7A57F871A9B9229001BD3E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +34,7 @@
 		A7A57F911A9B9229001BD3E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A7A57FA81A9B9285001BD3E3 /* NavigationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationState.swift; path = ../../Source/NavigationState.swift; sourceTree = "<group>"; };
 		A7A57FA91A9B9285001BD3E3 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = State.swift; path = ../../Source/State.swift; sourceTree = "<group>"; };
-		A7A57FAA1A9B9285001BD3E3 /* ViewControllerState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerState.swift; path = ../../Source/ViewControllerState.swift; sourceTree = "<group>"; };
+		A7A57FAA1A9B9285001BD3E3 /* LinearScreenStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinearScreenStateMachine.swift; path = ../../Source/LinearScreenStateMachine.swift; sourceTree = "<group>"; };
 		A7A57FAE1A9B9329001BD3E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A7A57FAF1A9B932A001BD3E3 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		A7A57FB21A9B93AE001BD3E3 /* LastNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastNameViewController.swift; sourceTree = "<group>"; };
@@ -97,9 +101,11 @@
 		A7A57FA71A9B924E001BD3E3 /* Pathway */ = {
 			isa = PBXGroup;
 			children = (
+				A77A20A81A9E6CAF00B56D73 /* BaseScreenStateMachine.swift */,
 				A7A57FA81A9B9285001BD3E3 /* NavigationState.swift */,
+				A77A20A61A9E6C1B00B56D73 /* ScreenStateMachine.swift */,
 				A7A57FA91A9B9285001BD3E3 /* State.swift */,
-				A7A57FAA1A9B9285001BD3E3 /* ViewControllerState.swift */,
+				A7A57FAA1A9B9285001BD3E3 /* LinearScreenStateMachine.swift */,
 			);
 			name = Pathway;
 			sourceTree = "<group>";
@@ -178,7 +184,9 @@
 			files = (
 				A7A57FBB1A9B94B9001BD3E3 /* PersonStateMachine.swift in Sources */,
 				A7A57FB01A9B932A001BD3E3 /* HomeViewController.swift in Sources */,
-				A7A57FAD1A9B9285001BD3E3 /* ViewControllerState.swift in Sources */,
+				A77A20A71A9E6C1B00B56D73 /* ScreenStateMachine.swift in Sources */,
+				A7A57FAD1A9B9285001BD3E3 /* LinearScreenStateMachine.swift in Sources */,
+				A77A20A91A9E6CAF00B56D73 /* BaseScreenStateMachine.swift in Sources */,
 				A7A57FAB1A9B9285001BD3E3 /* NavigationState.swift in Sources */,
 				A7A57FB81A9B941B001BD3E3 /* EndViewController.swift in Sources */,
 				A7A57FB41A9B93AE001BD3E3 /* LastNameViewController.swift in Sources */,
@@ -317,6 +325,7 @@
 				A7A57FA31A9B9229001BD3E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
